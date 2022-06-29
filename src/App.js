@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import TOC from './components/TOC';
 
 class App extends Component {
+
   render() {
     return (
       <div>
