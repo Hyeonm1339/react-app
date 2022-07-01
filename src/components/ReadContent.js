@@ -1,15 +1,18 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-class ReadContent extends Component {
-
+class ReadContents extends Component {
     render() {
-        console.log('Content render');
+        console.log('ReadContents render');
         return (
             <article>
-                <h2>{this.props.title}</h2>
-                {this.props.sub}
+                <h2><a href='/' onClick={function (e) {
+                    e.preventDefault();
+                    this.props.onChangePage();
+                }.bind(this)}>{this.props.title}</a></h2>
+                {this.props.desc}
             </article>
         )
-    }
+    };
 }
-export default ReadContent;
+
+export default ReadContents;

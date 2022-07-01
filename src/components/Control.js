@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Subject extends Component {
 
     render() {
-        console.log('Control render');
         return (
             <ul>
                 <li>
@@ -27,8 +26,12 @@ class Subject extends Component {
                 <li>
                     <input
                         type="button"
-                        value='delete'
-                    ></input>
+                        value="delete"
+                        onClick={function (e) {
+                            //delete는 버튼 사용.
+                            e.preventDefault();
+                            this.props.onChangeMode('delete');
+                        }.bind(this)}></input>
                 </li>
             </ul >
         );
